@@ -45,7 +45,7 @@ public class addRecordPage {
 
     @After
     public void teardown() {
-        //navegador.quit();
+        navegador.quit();
     }
 
 }
