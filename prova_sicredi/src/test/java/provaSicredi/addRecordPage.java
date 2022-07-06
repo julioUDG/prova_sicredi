@@ -21,19 +21,11 @@ public class addRecordPage {
         String msg = new addTemaPage(navegador)
                 .EscolherTema()
                 .clickAddRecord()
-                .preencherCustomerName("Teste Sicredi")
-                .preenchercontactLastName("Teste")
-                .preenchercontactFirstName("Julio")
-                .preencherPhone("51 9999-9999")
-                .preencherAddressLine1("Av Assis Brasil, 3970")
-                .preencherAddressLine2("Torre D")
-                .preencherCity("Porto Alegre")
-                .preencherState("RS")
-                .preencherPostalCode("91000-000")
-                .preencherCountry("Brasil")
-                .preencherEmployee("6666666")
+                .cadastrarPessoa("Teste Sicredi","Teste", "Julio", "51 9999-9999")
+                .cadastrarEndereco("Av Assis Brasil, 3970", "Torre D", "Porto Alegre", "RS", "91000-000", "Brasil" )
+                .preencherEmployeeNumber("2022")
                 .preencherCreditLimit("200")
-                .preencherDeleted("TRU")
+                .preencherDeleted("TRUE")
                 .clickSave()
                 .validarMensagemSave();
 
@@ -45,7 +37,7 @@ public class addRecordPage {
 
     @After
     public void teardown() {
-        navegador.quit();
+       navegador.quit();
     }
 
 }

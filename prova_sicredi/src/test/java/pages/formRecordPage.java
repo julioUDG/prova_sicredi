@@ -63,7 +63,7 @@ public class formRecordPage extends BaseNavegadorPage {
         return this;
     }
 
-    public formRecordPage preencherEmployee(String employee) {
+    public formRecordPage preencherEmployeeNumber(String employee) {
         navegador.findElement(By.id("field-salesRepEmployeeNumber")).sendKeys(employee);
         return this;
     }
@@ -75,6 +75,25 @@ public class formRecordPage extends BaseNavegadorPage {
 
     public formRecordPage preencherDeleted(String deleted) {
         navegador.findElement(By.id("field-deleted")).sendKeys(deleted);
+        return this;
+    }
+
+    public formRecordPage cadastrarPessoa ( String name, String lastName, String firstName, String phone) {
+                preencherCustomerName(name);
+                preenchercontactLastName(lastName);
+                preenchercontactFirstName(firstName);
+                preencherPhone(phone);
+        return this;
+    }
+
+    public formRecordPage cadastrarEndereco ( String addressLine1, String addressLine2, String city, String state,String postalCode, String Country  ) {
+                preencherAddressLine1(addressLine1);
+                preencherAddressLine2(addressLine2);
+                preencherCity(city);
+                preencherState(state);
+                preencherPostalCode(postalCode);
+                preencherCountry(Country);
+
         return this;
     }
 
